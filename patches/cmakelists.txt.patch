@@ -1,0 +1,22 @@
+diff --git a/Code/PgSQL/rdkit/CMakeLists.txt b/Code/PgSQL/rdkit/CMakeLists.txt
+index fb062165..67494f8e 100644
+--- a/Code/PgSQL/rdkit/CMakeLists.txt
++++ b/Code/PgSQL/rdkit/CMakeLists.txt
+@@ -1,5 +1,17 @@
+ cmake_minimum_required(VERSION 2.8.8)
+ 
++project(RDKitPostgreSQL)
++enable_testing()
++
++find_package(RDKit REQUIRED)
++include_directories(${RDKit_INCLUDE_DIRS})
++
++find_package(PostgreSQL REQUIRED)
++find_package(Boost 1.39.0 REQUIRED COMPONENTS serialization)
++find_package(Cairo REQUIRED)
++find_package(Eigen3 REQUIRED)
++find_package(Threads REQUIRED)
++
+ if(APPLE)
+   set (EXTENSION_PREFIX "")
+   set (EXTENSION_SUFFIX ".so")
