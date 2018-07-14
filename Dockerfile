@@ -1,4 +1,4 @@
-FROM mcs07/rdkit:latest as rdkit-env
+FROM mcs07/rdkit:2018.03.1 as rdkit-env
 
 FROM postgres:10 AS rdkit-postgres-build-env
 
