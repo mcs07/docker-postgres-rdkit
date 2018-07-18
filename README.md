@@ -43,7 +43,7 @@ See the [official postgres image](https://hub.docker.com/_/postgres/) for more d
 
 ## Building
 
-A multi-stage docker build is used to produce a lightweight production image without all the build dependencies. This image uses [mcs07/rdkit](https://github.com/mcs07/postgres-rdkit) as an earlier build stage to provide the RDKit libraries.
+A multi-stage docker build is used to produce a lightweight production image without all the build dependencies. This image uses [mcs07/rdkit](https://github.com/mcs07/docker-rdkit) as an earlier build stage to provide the RDKit libraries.
 
 To build, run:
 
